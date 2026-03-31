@@ -20,7 +20,7 @@ export default function LeadMagnet() {
     setSuccess(true);
   }
   return (
-    <section className="section section-alt" id="resources">
+    <section className="section" id="resources">
       <div className="container magnet-container">
         <div className="magnet-image">
           <img src="/images/ebook-cover.jpg" alt="Your Key to Personal Happiness E-Book Cover" className="magnet-image-el" />

@@ -3,7 +3,7 @@ import { CheckCircle, CrossCircle } from './ui/Icons';
 
 export default function Comparison() {
   return (
-    <section className="section" id="what-to-expect">
+    <section className="section section-alt" id="what-to-expect">
       <div className="container comparison-container">
         <div className="comparison-content">
           <p className="kicker">TRANSFORMATION, NOT JUST TALKING</p>

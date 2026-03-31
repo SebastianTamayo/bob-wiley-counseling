@@ -80,7 +80,7 @@ button, input, textarea {
 }
 
 .section-alt {
-  background-color: var(--color-background-alt);
+  background: radial-gradient(circle at center, #ffffff 0%, #f1f5f9 120%);
 }
 
 /* =========================================
@@ -170,7 +170,7 @@ button, input, textarea {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: var(--color-dark);
+  background: linear-gradient(90deg, #1e0b36 0%, #0f172a 100%);
   color: white;
   border-bottom: 1px solid rgba(255,255,255,0.05);
   padding: 1rem 0;
@@ -236,7 +236,7 @@ button, input, textarea {
    Footer
    ========================================= */
 .footer {
-  background-color: var(--color-dark);
+  background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
   color: #f8fafc;
   padding: 4rem 0 2rem;
 }

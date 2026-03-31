@@ -2,7 +2,7 @@ import { Button } from './ui/Button';
 
 export default function About() {
   return (
-    <section className="section" id="about">
+    <section className="section section-alt" id="about">
       <div className="container about-container">
         <div className="about-image-wrapper">
           <img src="/images/bob-headshot.jpg" alt="Bob Wiley Portrait" className="about-image-el" />

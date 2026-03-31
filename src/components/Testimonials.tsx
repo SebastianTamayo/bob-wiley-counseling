@@ -17,7 +17,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="section section-alt">
+    <section className="section" id="testimonials">
       <div className="container test-container">
         <div className="test-header">
           <p className="kicker">CLIENT STORIES</p>
