@@ -1,4 +1,3 @@
-import './Testimonials.css';
 import { StarIcon } from './ui/Icons';
 
 export default function Testimonials() {
