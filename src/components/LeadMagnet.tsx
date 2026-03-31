@@ -46,11 +46,11 @@ export default function LeadMagnet() {
               <p>Check your inbox in a few minutes for the download link.</p>
             </div>
           ) : (
-            <form className="magnet-form" onSubmit={handleSubmit} style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
-              <div style={{ flex: '1 1 250px' }}>
-                <Input type="email" name="email" placeholder="Your best email address" required style={{ marginBottom: 0 }} />
+            <form className="magnet-form" onSubmit={handleSubmit}>
+              <div className="magnet-input-group">
+                <Input type="email" name="email" placeholder="Your best email address" required className="magnet-input" />
               </div>
-              <Button variant="outline" type="submit" className="btn-danger-outline" disabled={isSubmitting}>
+              <Button variant="outline" type="submit" disabled={isSubmitting}>
                 {isSubmitting ? 'Sending...' : 'Get the free E-book'}
               </Button>
             </form>

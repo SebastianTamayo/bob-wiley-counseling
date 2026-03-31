@@ -425,9 +425,21 @@ button, input, textarea {
 .book-cover p { font-size: 0.85rem; opacity: 0.9; margin-bottom: 1rem; }
 .book-cover h5 { font-size: 0.9rem; font-style: italic; opacity: 0.7; }
 
-.magnet-benefits { margin-bottom: 2rem; }
-.magnet-benefits li { margin-bottom: 0.5rem; }
-.magnet-benefits li::before { content: "✓ "; color: var(--color-primary); font-weight: bold; }
+.magnet-form {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  margin-top: 1.5rem;
+}
+.magnet-input-group {
+  flex-grow: 1;
+}
+.magnet-input {
+  margin-bottom: 0 !important;
+}
+.magnet-form button {
+  white-space: nowrap;
+}
 
 /* About Section */
 .about-container {
@@ -468,6 +480,10 @@ button, input, textarea {
   .comparison-container, .magnet-container, .about-container, .cta-container { grid-template-columns: 1fr; gap: 3rem; }
   .test-grid { grid-template-columns: 1fr; }
   .book-placeholder { max-width: 250px; }
+  .magnet-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
 }
 
 .about-image-el {
