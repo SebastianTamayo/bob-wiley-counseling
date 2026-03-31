@@ -13,8 +13,29 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Bob Wiley Counseling",
-  description: "Life is easier than you think. Find your personal happiness with Bob Wiley Counseling.",
+  title: "Bob Wiley Counseling | Transformational Life Counseling",
+  description: "Life is easier than you think. Discover true transformation with Bob Wiley, MA, LMHC, CSAT. Overcome personal challenges and find happiness with personalized counseling.",
+  keywords: "counseling, therapy, Bob Wiley, mental health, personal happiness, LMHC, CSAT, online therapy, life coaching",
+  openGraph: {
+    title: "Bob Wiley Counseling | Transformational Life Counseling",
+    description: "Discover true transformation with Bob Wiley, MA, LMHC, CSAT. Overcome personal challenges and find happiness.",
+    url: "https://bobwileycounseling.com",
+    siteName: "Bob Wiley Counseling",
+    images: [
+      {
+        url: "https://bobwileycounseling.com/images/bob-headshot.jpg",
+        width: 800,
+        height: 800,
+        alt: "Bob Wiley, MA, LMHC, CSAT - Counseling Professional"
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  }
 };
 
 import Navbar from "@/components/Navbar";

@@ -23,7 +23,7 @@ export default function LeadMagnet() {
     <section className="section" id="resources">
       <div className="container magnet-container">
         <div className="magnet-image">
-          <img src="/images/ebook-cover.jpg" alt="Your Key to Personal Happiness E-Book Cover" className="magnet-image-el" />
+          <img src="/images/ebook-cover.jpg" alt="Free Counseling E-Book: Your Key to Personal Happiness by Bob Wiley" className="magnet-image-el" />
         </div>
         
         <div className="magnet-content">
