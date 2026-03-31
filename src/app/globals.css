@@ -245,7 +245,7 @@ button, input, textarea {
 
 .footer-container {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr 1fr;
   gap: 2rem;
   margin-bottom: 2rem;
 }
@@ -259,7 +259,7 @@ button, input, textarea {
   height: 80px;
   width: auto;
   display: block;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.25rem;
   opacity: 0.9;
 }
 

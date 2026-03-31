@@ -12,8 +12,10 @@ export default function Footer() {
         </div>
         <div className="footer-col">
           <h4 className="footer-heading">Contact</h4>
-          <p className="footer-text">hello@bobwileycounseling.com</p>
-          <p className="footer-text">(555) 123-4567</p>
+          <nav className="footer-nav">
+            <a href="mailto:hello@bobwileycounseling.com">hello@bobwileycounseling.com</a>
+            <a href="tel:+15551234567">(555) 123-4567</a>
+          </nav>
         </div>
         <div className="footer-col">
           <h4 className="footer-heading">Links</h4>
