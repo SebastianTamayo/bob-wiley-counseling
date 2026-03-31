@@ -5,7 +5,9 @@ export default function Footer() {
     <footer className="footer">
       <div className="container footer-container">
         <div className="footer-col">
-          <h3 className="footer-brand">Bob Wiley Counseling</h3>
+          <Link href="/" className="footer-brand-link">
+            <img src="/images/logo.png" alt="Bob Wiley Counseling" className="footer-logo-img" />
+          </Link>
           <p className="footer-copyright">&copy; {new Date().getFullYear()} Bob Wiley Counseling. All rights reserved.</p>
         </div>
         <div className="footer-col">

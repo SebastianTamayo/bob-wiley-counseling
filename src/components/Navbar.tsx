@@ -5,7 +5,7 @@ export default function Navbar() {
     <header className="navbar">
       <div className="container navbar-container">
         <Link href="/" className="navbar-logo">
-          <span className="logo-icon">❖</span> BOB WILEY COUNSELING
+          <img src="/images/logo.png" alt="Bob Wiley Counseling" className="navbar-logo-img" />
         </Link>
         <nav className="navbar-nav desktop-nav">
           <Link href="#services" className="nav-link">Services</Link>
