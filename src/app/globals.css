@@ -3,8 +3,8 @@
   --color-primary: #0ea5e9; /* Vibrant Cyan/Sky blue matching the mockup */
   --color-primary-hover: #0284c7;
   --color-dark: #1e1b4b; /* Deep Indigo navy for Footer & Navbar */
-  --color-text: #475569; /* Slate-600 */
-  --color-text-light: #64748b; /* Slate-500 */
+  --color-text: #334155; /* Slate-700 High Contrast Safe */
+  --color-text-light: #475569; /* Slate-600 */
   --color-heading: #0f172a; /* Slate-900 */
   --color-background: #ffffff;
   --color-background-alt: #f8fafc; /* Slate-50 soft gray/blue tint */
@@ -39,6 +39,8 @@ body {
   color: var(--color-text);
   background-color: var(--color-background);
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -333,6 +335,7 @@ button, input, textarea {
   color: var(--color-text);
   margin-bottom: 2rem;
   line-height: 1.7;
+  max-width: 65ch;
 }
 
 .text-white { color: white !important; }
