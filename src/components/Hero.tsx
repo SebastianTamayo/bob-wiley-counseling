@@ -45,7 +45,7 @@ export default function Hero() {
         </div>
 
         <div className="hero-form-card">
-          <h3 className="form-card-title">Request your free consult</h3>
+          <h3 className="form-card-title"><strong>Request your free consult.</strong></h3>
           <p className="form-card-desc">Fill out the brief form below and I will get back to you within one business day.</p>
           
           {success ? (
@@ -55,15 +55,15 @@ export default function Hero() {
             </div>
           ) : (
             <form className="hero-form" onSubmit={handleSubmit}>
-              <Input name="name" placeholder="First Name" required />
+              <Input name="name" placeholder="First and Last Name" required />
               <Input type="email" name="email" placeholder="Email Address" required />
               <Button variant="outline" type="submit" className="form-submit-btn btn-danger-outline" disabled={isSubmitting}>
-                {isSubmitting ? 'Requesting...' : 'Request my Consult'}
+                {isSubmitting ? 'Requesting...' : 'Schedule a Free Consult'}
               </Button>
             </form>
           )}
           
-          <p className="form-disclaimer">Your information is secure and confidential.</p>
+          <p className="form-disclaimer">We promise to never rent, share, or sell your information.</p>
         </div>
       </div>
     </section>

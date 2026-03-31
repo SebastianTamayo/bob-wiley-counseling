@@ -86,8 +86,8 @@ button, input, textarea {
 /* =========================================
    Icons
    ========================================= */
-.icon-check { color: #16a34a; flex-shrink: 0; }
-.icon-cross { color: #dc2626; flex-shrink: 0; }
+.icon-check { color: var(--color-primary); flex-shrink: 0; }
+.icon-cross { color: #ef4444; flex-shrink: 0; }
 .icon-star { color: #eab308; }
 .hero-benefits li, .check-list li, .cross-list li {
   display: flex;
@@ -328,6 +328,20 @@ button, input, textarea {
   color: var(--color-text-light);
   font-size: 0.95rem;
 }
+.trust-item {
+  flex: 1;
+  padding: 0 1rem;
+}
+.trust-item:not(:last-child) {
+  border-right: 1px solid var(--color-border);
+}
+@media (max-width: 768px) {
+  .trust-item:not(:last-child) {
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 1rem;
+  }
+}
 
 /* Comparison Section */
 .comparison-container {
@@ -337,9 +351,10 @@ button, input, textarea {
   align-items: center;
 }
 .comparison-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: stretch;
 }
 .card {
   background: white;
@@ -361,18 +376,8 @@ button, input, textarea {
 }
 .card-list li {
   position: relative;
-  padding-left: 1.5rem;
   color: var(--color-text);
 }
-.card-list li::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  color: var(--color-primary);
-  font-weight: bold;
-}
-.cross-list li::before { content: "✕"; color: #ef4444; font-size: 0.8rem; top: 2px; }
-.check-list li::before { content: "✓"; color: #10b981; }
 
 .card-modern {
   border-color: rgba(0, 136, 204, 0.2);
