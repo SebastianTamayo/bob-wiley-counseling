@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { Button } from './ui/Button';
 import { Input } from './ui/Input';
 import { submitLead } from '../app/actions';
@@ -39,7 +40,7 @@ export default function Hero() {
           </ul>
 
           <div className="hero-ctas">
-            <Button variant="outline">See my free guide</Button>
+            <Link href="#resources" className="btn btn-primary">Get a free guide (e-book)</Link>
           </div>
         </div>
 
