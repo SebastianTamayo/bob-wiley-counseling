@@ -39,7 +39,6 @@ export default function Hero() {
           </ul>
 
           <div className="hero-ctas">
-            <Button variant="primary">Book a free consult</Button>
             <Button variant="outline">See my free guide</Button>
           </div>
         </div>
