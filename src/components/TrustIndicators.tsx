@@ -3,7 +3,7 @@ export default function TrustIndicators() {
     <section className="section section-trust">
       <div className="container trust-container">
         <div className="trust-item">
-          <div className="trust-stat">20+ Years</div>
+          <div className="trust-stat">30+ Years</div>
           <div className="trust-label">Experience guiding clients</div>
         </div>
         <div className="trust-item">

@@ -47,7 +47,8 @@ export default function LeadMagnet() {
             </div>
           ) : (
             <form className="magnet-form" onSubmit={handleSubmit}>
-              <div className="magnet-input-group">
+              <div className="magnet-input-group" style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+                <Input name="name" placeholder="Full Name" required className="magnet-input" />
                 <Input type="email" name="email" placeholder="Your best email address" required className="magnet-input" />
               </div>
               <Button variant="outline" type="submit" disabled={isSubmitting}>

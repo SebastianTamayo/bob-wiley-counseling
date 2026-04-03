@@ -23,7 +23,7 @@ export default function Navbar() {
           <Link href="#services" className="nav-link">Services</Link>
           <Link href="#about" className="nav-link">About</Link>
           <Link href="#resources" className="nav-link">Free Resources</Link>
-          <Link href="#consult" className="btn btn-primary btn-sm">Book Consult</Link>
+          <Link href="#hero" className="btn btn-primary btn-sm">Book Consult</Link>
         </nav>
         
         {/* Mobile menu toggle button */}
@@ -52,7 +52,7 @@ export default function Navbar() {
             <Link href="#services" className="mobile-nav-link" onClick={closeMenu}>Services</Link>
             <Link href="#about" className="mobile-nav-link" onClick={closeMenu}>About</Link>
             <Link href="#resources" className="mobile-nav-link" onClick={closeMenu}>Free Resources</Link>
-            <Link href="#consult" className="btn btn-primary btn-lg mobile-nav-btn" onClick={closeMenu}>Book Consult</Link>
+            <Link href="#hero" className="btn btn-primary btn-lg mobile-nav-btn" onClick={closeMenu}>Book Consult</Link>
           </nav>
         </div>
       </div>

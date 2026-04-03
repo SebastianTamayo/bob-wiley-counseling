@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Button } from './ui/Button';
 import { CheckCircle, CrossCircle } from './ui/Icons';
 
@@ -15,7 +16,7 @@ export default function Comparison() {
             true momentum and transform how you experience your life.
           </p>
           <div className="comparison-cta">
-            <Button variant="dark">Book a consult</Button>
+            <Link href="#hero" className="btn btn-dark">Book a consult</Link>
           </div>
         </div>
 

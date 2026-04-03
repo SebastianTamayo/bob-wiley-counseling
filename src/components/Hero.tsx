@@ -56,6 +56,13 @@ export default function Hero() {
             <form className="hero-form" onSubmit={handleSubmit}>
               <Input name="name" placeholder="First and Last Name" required />
               <Input type="email" name="email" placeholder="Email Address" required />
+              <textarea 
+                name="details" 
+                placeholder="Describe areas to focus on" 
+                className="input-field" 
+                rows={3} 
+                style={{ width: '100%', marginBottom: '1rem', resize: 'vertical' }}
+              />
               <Button variant="outline" type="submit" className="form-submit-btn btn-danger-outline" disabled={isSubmitting}>
                 {isSubmitting ? 'Requesting...' : 'Schedule a Free Consult'}
               </Button>
