@@ -11,15 +11,26 @@ import './Hero.css';
 export default function Hero() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setIsSubmitting(true);
+    setErrorMsg("");
     const formData = new FormData(e.currentTarget);
     formData.append('type', 'hero-consultation');
-    await submitLead(formData);
-    setIsSubmitting(false);
-    setSuccess(true);
+    try {
+      const result = await submitLead(formData);
+      setIsSubmitting(false);
+      if (result && result.success) {
+        setSuccess(true);
+      } else {
+        setErrorMsg(result?.message || "Please check your inputs and try again.");
+      }
+    } catch (err) {
+      setIsSubmitting(false);
+      setErrorMsg("A network error occurred. Please try again.");
+    }
   }
   return (
     <section className="hero-section section-alt" id="hero">
@@ -55,6 +66,8 @@ export default function Hero() {
             </div>
           ) : (
             <form className="hero-form" onSubmit={handleSubmit}>
+              <input type="text" name="_botcheck" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
+              {errorMsg && <div className="form-error-alert" style={{ color: 'red', marginBottom: '1rem', fontSize: '0.9rem' }}>{errorMsg}</div>}
               <Input name="name" placeholder="First and Last Name" required />
               <Input type="email" name="email" placeholder="Email Address" required />
               <textarea 

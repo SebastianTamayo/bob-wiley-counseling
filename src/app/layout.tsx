@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     follow: true,
   }
 };
-
+import { GoogleTagManager } from '@next/third-parties/google';
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -48,6 +48,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
+      <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID || 'GTM-XXXXXXX'} />
       <body suppressHydrationWarning>
         <Navbar />
         {children}
