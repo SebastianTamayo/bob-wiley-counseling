@@ -11,6 +11,7 @@ const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.SUP
 
 // Initialize Resend conditionally so build doesn't crash if env is missing
 const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
+const teamEmail = process.env.TEAM_NOTIFICATION_EMAIL || 'bob@bobwileycounseling.com';
 
 const leadSchema = z.object({
   name: z.string().min(1, "Name is required").max(100, "Name is too long"),
@@ -79,7 +80,7 @@ export async function submitLead(formData: FormData) {
       // Always notify the team internally
       await resend.emails.send({
         from: 'Website <alerts@bobwileycounseling.com>',
-        to: 'bob@bobwileycounseling.com', // Replace with actual internal email
+        to: teamEmail,
         subject: `New Lead: ${name} (${type})`,
         react: await LeadNotificationTemplate({ name, email, type, details }),
       });
