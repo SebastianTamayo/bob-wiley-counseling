@@ -10,10 +10,9 @@ export default function Comparison() {
           <p className="kicker">TRANSFORMATION, NOT JUST TALKING</p>
           <h2 className="section-title">A Different Way Forward</h2>
           <p className="section-desc">
-            Most traditional therapy goes like this: You show up, vent about your week,
-            and leave feeling a little lighter—but nothing really changes. We focus on identifying
-            the root patterns and core beliefs that keep you stuck, so you can experience
-            true momentum and transform how you experience your life.
+            Most counseling focuses on managing your reactions. We focus on the internal mechanics that create them. 
+            By understanding the <strong>Stimulus - Belief - Response</strong> model, we uncover the hidden beliefs 
+            mediating your experience, giving you the power to transform your response and find lasting peace.
           </p>
           <div className="comparison-cta">
             <Link href="#hero" className="btn btn-dark">Book a consult</Link>
