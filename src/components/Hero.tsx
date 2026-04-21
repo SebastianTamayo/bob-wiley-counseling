@@ -36,19 +36,14 @@ export default function Hero() {
     <section className="hero-section section-alt" id="hero">
       <div className="container hero-container">
         <div className="hero-content">
-          <p className="hero-kicker">HELPING YOU FIND A BETTER WAY TO LIVE</p>
-          <h1 className="hero-title">There Is Nothing Wrong With You</h1>
+          <p className="hero-kicker">THERE IS NOTHING WRONG WITH YOU</p>
+          <h1 className="hero-title">The Problem Isn't You. It's What You've Been Taught.</h1>
           <p className="hero-subtitle">
-            Life is easier than you think. Together, we'll discover the beliefs that keep you stuck, 
-            giving you a clear path out and transforming how you see the world through the lens of 'awesomeness'.
+            Life is easier than you think. Together, we’ll uncover the beliefs that have been creating your struggles and discover the inner peace, clarity and confidence you’ve been searching for.
           </p>
-          
-          <ul className="hero-benefits">
-            <li><CheckCircle className="icon-check" /> Overcome anxiety and restore inner peace</li>
-            <li><CheckCircle className="icon-check" /> Feel heard, validated, and understood</li>
-            <li><CheckCircle className="icon-check" /> Build habits that build true resilience</li>
-            <li><CheckCircle className="icon-check" /> Find the "Missing Key" to personal happiness</li>
-          </ul>
+          <p className="hero-subtitle" style={{ marginTop: '1rem' }}>
+            Most people are struggling not because they're broken, but because they've learned to see themselves and their world in ways that create suffering.
+          </p>
 
           <div className="hero-ctas">
             <Link href="#resources" className="btn btn-primary">Get a free guide (e-book)</Link>
@@ -56,7 +51,7 @@ export default function Hero() {
         </div>
 
         <div className="hero-form-card">
-          <h3 className="form-card-title"><strong>Request your free consult.</strong></h3>
+          <h3 className="form-card-title"><strong>What best describes the challenges you are facing?</strong></h3>
           <p className="form-card-desc">Fill out the brief form below and I will get back to you within one business day.</p>
           
           {success ? (

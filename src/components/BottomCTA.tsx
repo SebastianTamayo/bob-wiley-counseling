@@ -23,7 +23,7 @@ export default function BottomCTA() {
     <section className="section section-cta" id="consult">
       <div className="container cta-container">
         <div className="cta-content">
-          <h2 className="section-title text-white">Ready for an empowered next chapter?</h2>
+          <h2 className="section-title text-white">Take That Hardest First Step</h2>
           <p className="cta-desc text-white-alpha">
             Book a free 20-minute consult to see if working together feels right. We'll talk about what you're dealing with, our approach, and outline the next steps.
           </p>

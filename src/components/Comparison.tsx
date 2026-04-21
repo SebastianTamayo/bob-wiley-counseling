@@ -22,23 +22,26 @@ export default function Comparison() {
 
         <div className="comparison-cards">
           <div className="card card-traditional">
-            <h3 className="card-title">Typical Counseling...</h3>
+            <h3 className="card-title">Are you experiencing...</h3>
             <ul className="cross-list">
-              <li><CrossCircle className="icon-cross" /> Focusing heavily on diagnosing you with a label</li>
-              <li><CrossCircle className="icon-cross" /> Relying purely on talk therapy without tools</li>
-              <li><CrossCircle className="icon-cross" /> Endless exploration of the past without clear steps forward</li>
-              <li><CrossCircle className="icon-cross" /> Feeling like you're stuck in the same cycles of feeling</li>
+              <li><CrossCircle className="icon-cross" /> Anxiety that won't let you rest</li>
+              <li><CrossCircle className="icon-cross" /> Feeling stuck in the same cycles</li>
+              <li><CrossCircle className="icon-cross" /> Heavy burden of self-doubt</li>
+              <li><CrossCircle className="icon-cross" /> Traditional therapy hasn't worked</li>
             </ul>
           </div>
           <div className="card card-modern">
             <div className="card-accent" />
             <h3 className="card-title text-primary">Imagine instead...</h3>
             <ul className="check-list">
-              <li><CheckCircle className="icon-check" /> Identifying precisely why you feel the way you do</li>
-              <li><CheckCircle className="icon-check" /> Learning the mechanics of how your mind works</li>
-              <li><CheckCircle className="icon-check" /> Practical exercises for immediate relief</li>
-              <li><CheckCircle className="icon-check" /> A proven system mapped to your specific challenges</li>
-              <li><CheckCircle className="icon-check" /> Finally mastering your personal state of mind and finding a sense of well-being</li>
+              <li><CheckCircle className="icon-check" /> Waking with inner peace and confidence</li>
+              <li><CheckCircle className="icon-check" /> Accepting yourself completely, without judgment</li>
+              <li><CheckCircle className="icon-check" /> Breaking free from old patterns permanently</li>
+              <li><CheckCircle className="icon-check" /> Creating authentic, loving connections</li>
+              <li><CheckCircle className="icon-check" /> Letting go of the need to control</li>
+              <li><CheckCircle className="icon-check" /> Taking full ownership of your experience</li>
+              <li><CheckCircle className="icon-check" /> Experiencing transformation, not just coping</li>
+              <li><CheckCircle className="icon-check" /> Living from a place of genuine happiness</li>
             </ul>
           </div>
         </div>
