@@ -20,7 +20,7 @@ export const EbookTemplate: React.FC<Readonly<EbookTemplateProps>> = ({
         <Text style={text}>
           You can download your free E-Book by clicking the link below:
         </Text>
-        <Link href="https://bobwileycounseling.com/downloads/ebook-guide.pdf" style={button}>
+        <Link href="https://bobwileycounseling.com/downloads/Your%20Key%20to%20Personal%20Happiness%20(EBook).pdf" style={button}>
           Download E-Book
         </Link>
         <Text style={text}>
