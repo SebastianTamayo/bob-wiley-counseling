@@ -16,7 +16,7 @@ export default function Comparison() {
           </div>
 
           <div className="comparison-cards">
-            <div className="card card-traditional">
+            <div className="card card-traditional reveal">
               <h3 className="card-title">Are You Experiencing...</h3>
               <ul className="cross-list">
                 <li><CrossCircle className="icon-cross" /> Anxiety that won't let you rest</li>
@@ -30,19 +30,19 @@ export default function Comparison() {
                 <li><CrossCircle className="icon-cross" /> Feeling like you're barely holding it together</li>
               </ul>
             </div>
-            <div className="card card-modern">
+            <div className="card card-modern reveal reveal-delay-2">
               <div className="card-accent" />
               <h3 className="card-title text-primary">Imagine Instead...</h3>
               <ul className="check-list">
-                <li><CheckCircle className="icon-check" /> Inner peace and confidence</li>
-                <li><CheckCircle className="icon-check" /> Clarity about who you are</li>
-                <li><CheckCircle className="icon-check" /> Healthier, more authentic relationships</li>
-                <li><CheckCircle className="icon-check" /> Freedom from anxiety and depression</li>
-                <li><CheckCircle className="icon-check" /> Self-trust and self-acceptance</li>
-                <li><CheckCircle className="icon-check" /> Emotional resilience</li>
-                <li><CheckCircle className="icon-check" /> The ability to handle life's challenges</li>
-                <li><CheckCircle className="icon-check" /> Living from the inside out</li>
-                <li><CheckCircle className="icon-check" /> Finally feeling comfortable in your own skin</li>
+                <li><CheckCircle className="icon-check-glow" /> <strong>Inner peace and confidence</strong></li>
+                <li><CheckCircle className="icon-check-glow" /> <strong>Clarity about who you are</strong></li>
+                <li><CheckCircle className="icon-check-glow" /> <strong>Healthier, more authentic relationships</strong></li>
+                <li><CheckCircle className="icon-check-glow" /> <strong>Freedom from anxiety and depression</strong></li>
+                <li><CheckCircle className="icon-check-glow" /> <strong>Self-trust and self-acceptance</strong></li>
+                <li><CheckCircle className="icon-check-glow" /> <strong>Emotional resilience</strong></li>
+                <li><CheckCircle className="icon-check-glow" /> <strong>The ability to handle life's challenges</strong></li>
+                <li><CheckCircle className="icon-check-glow" /> <strong>Living from the inside out</strong></li>
+                <li><CheckCircle className="icon-check-glow" /> <strong>Finally feeling comfortable in your own skin</strong></li>
               </ul>
             </div>
           </div>
