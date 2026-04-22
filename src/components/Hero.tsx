@@ -42,11 +42,14 @@ export default function Hero() {
           <p className="hero-kicker">THERE IS NOTHING WRONG WITH YOU</p>
           <h1 className="hero-title">The Problem Isn't You. It's What You've Been Taught.</h1>
           <p className="hero-subtitle">
-            Life is easier than you think. Together, we’ll uncover the beliefs that have been creating your struggles and discover the inner peace, clarity and confidence you’ve been searching for.
+            For over 30 years, I've helped individuals find their way from surviving to thriving.
           </p>
           <p className="hero-subtitle" style={{ marginTop: '1rem' }}>
-            Most people are struggling not because they're broken, but because they've learned to see themselves and their world in ways that create suffering.
+            Life is easier than you think. Together, we’ll uncover the beliefs that have been creating your struggles and discover the inner peace, clarity and confidence you’ve been searching for.
           </p>
+          <div className="waitlist-indicator">
+            <span className="dot"></span> Waitlist for January 2027 is now open
+          </div>
 
           <div className="hero-ctas">
             <Link href="#resources" className="btn btn-primary">Get a free guide (e-book)</Link>
@@ -54,7 +57,7 @@ export default function Hero() {
         </div>
 
         <div className="hero-form-card">
-          <h3 className="form-card-title"><strong>What best describes the challenges you are facing?</strong></h3>
+          <h3 className="form-card-title">Are you ready for change?</h3>
           <p className="form-card-desc">Fill out the brief form below and I will get back to you within one business day.</p>
           
           {success ? (

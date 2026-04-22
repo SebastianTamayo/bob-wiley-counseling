@@ -5,44 +5,53 @@ import { CheckCircle, CrossCircle } from './ui/Icons';
 export default function Comparison() {
   return (
     <section className="section section-alt" id="what-to-expect">
-      <div className="container comparison-container">
-        <div className="comparison-content">
-          <p className="kicker">TRANSFORMATION, NOT JUST TALKING</p>
-          <h2 className="section-title">A Different Way Forward</h2>
-          <p className="section-desc">
-            Most counseling focuses on managing your reactions. We focus on the internal mechanics that create them. 
-            By understanding the <strong>Stimulus - Belief - Response</strong> model, we uncover the hidden beliefs 
-            mediating your experience, giving you the power to transform your response and find lasting peace.
-          </p>
-          <div className="comparison-cta">
-            <Link href="#hero" className="btn btn-dark">Book a consult</Link>
+      <div className="container">
+        <div className="comparison-grid">
+          <div className="comparison-content">
+            <p className="kicker">TRANSFORMATION, NOT JUST TALKING</p>
+            <h2 className="section-title">A Different Way Forward</h2>
+            <p className="section-desc">
+              Most approaches focus on managing symptoms. I help you discover and transform the beliefs creating those symptoms.
+            </p>
+          </div>
+
+          <div className="comparison-cards">
+            <div className="card card-traditional">
+              <h3 className="card-title">Are You Experiencing...</h3>
+              <ul className="cross-list">
+                <li><CrossCircle className="icon-cross" /> Anxiety that won't let you rest</li>
+                <li><CrossCircle className="icon-cross" /> Feeling stuck in the same patterns</li>
+                <li><CrossCircle className="icon-cross" /> Relationship difficulties</li>
+                <li><CrossCircle className="icon-cross" /> Depression and emotional exhaustion</li>
+                <li><CrossCircle className="icon-cross" /> Harsh self-criticism and self-doubt</li>
+                <li><CrossCircle className="icon-cross" /> Fear of rejection or not being enough</li>
+                <li><CrossCircle className="icon-cross" /> The weight of past regrets</li>
+                <li><CrossCircle className="icon-cross" /> Worry about the future</li>
+                <li><CrossCircle className="icon-cross" /> Feeling like you're barely holding it together</li>
+              </ul>
+            </div>
+            <div className="card card-modern">
+              <div className="card-accent" />
+              <h3 className="card-title text-primary">Imagine Instead...</h3>
+              <ul className="check-list">
+                <li><CheckCircle className="icon-check" /> Inner peace and confidence</li>
+                <li><CheckCircle className="icon-check" /> Clarity about who you are</li>
+                <li><CheckCircle className="icon-check" /> Healthier, more authentic relationships</li>
+                <li><CheckCircle className="icon-check" /> Freedom from anxiety and depression</li>
+                <li><CheckCircle className="icon-check" /> Self-trust and self-acceptance</li>
+                <li><CheckCircle className="icon-check" /> Emotional resilience</li>
+                <li><CheckCircle className="icon-check" /> The ability to handle life's challenges</li>
+                <li><CheckCircle className="icon-check" /> Living from the inside out</li>
+                <li><CheckCircle className="icon-check" /> Finally feeling comfortable in your own skin</li>
+              </ul>
+            </div>
           </div>
         </div>
 
-        <div className="comparison-cards">
-          <div className="card card-traditional">
-            <h3 className="card-title">Are you experiencing...</h3>
-            <ul className="cross-list">
-              <li><CrossCircle className="icon-cross" /> Anxiety that won't let you rest</li>
-              <li><CrossCircle className="icon-cross" /> Feeling stuck in the same cycles</li>
-              <li><CrossCircle className="icon-cross" /> Heavy burden of self-doubt</li>
-              <li><CrossCircle className="icon-cross" /> Traditional therapy hasn't worked</li>
-            </ul>
-          </div>
-          <div className="card card-modern">
-            <div className="card-accent" />
-            <h3 className="card-title text-primary">Imagine instead...</h3>
-            <ul className="check-list">
-              <li><CheckCircle className="icon-check" /> Waking with inner peace and confidence</li>
-              <li><CheckCircle className="icon-check" /> Accepting yourself completely, without judgment</li>
-              <li><CheckCircle className="icon-check" /> Breaking free from old patterns permanently</li>
-              <li><CheckCircle className="icon-check" /> Creating authentic, loving connections</li>
-              <li><CheckCircle className="icon-check" /> Letting go of the need to control</li>
-              <li><CheckCircle className="icon-check" /> Taking full ownership of your experience</li>
-              <li><CheckCircle className="icon-check" /> Experiencing transformation, not just coping</li>
-              <li><CheckCircle className="icon-check" /> Living from a place of genuine happiness</li>
-            </ul>
-          </div>
+        <div className="quote-box">
+          <p className="quote-text">
+            "We do not have to be victims of the events in our world. We can take charge of our lives and provide ourselves with the inner ease and comfort to face all challenges with confidence and clarity."
+          </p>
         </div>
       </div>
     </section>

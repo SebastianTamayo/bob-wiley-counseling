@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import TrustIndicators from "@/components/TrustIndicators";
 import Comparison from "@/components/Comparison";
+import StimulusBeliefResponse from "@/components/StimulusBeliefResponse";
 import Differentiation from "@/components/Differentiation";
 import LeadMagnet from "@/components/LeadMagnet";
 import About from "@/components/About";
@@ -14,6 +15,7 @@ export default function Home() {
       <Hero />
       <TrustIndicators />
       <Comparison />
+      <StimulusBeliefResponse />
       <Differentiation />
       <LeadMagnet />
       <About />
