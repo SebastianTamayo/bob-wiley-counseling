@@ -15,9 +15,12 @@ export default function Hero() {
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    console.log("🖱️ Form Clicked - starting submission...");
     setIsSubmitting(true);
     setErrorMsg("");
     const formData = new FormData(e.currentTarget);
+    const dataObj = Object.fromEntries(formData.entries());
+    console.log("📤 Sending data:", dataObj);
     formData.append('type', 'hero-consultation');
     try {
       const result = await submitLead(formData);

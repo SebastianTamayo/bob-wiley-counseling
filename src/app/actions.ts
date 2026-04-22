@@ -21,6 +21,9 @@ const leadSchema = z.object({
 });
 
 export async function submitLead(formData: FormData) {
+  console.log("-----------------------------------------");
+  console.log("📩 INCOMING LEAD AT:", new Date().toLocaleTimeString());
+  
   // Honeypot check for bots
   const honeypot = formData.get('_botcheck')?.toString();
   if (honeypot) {
@@ -58,8 +61,8 @@ export async function submitLead(formData: FormData) {
     .insert([{ name, email, lead_type: type, details: details || null }]);
 
   if (error) {
-    console.error("Supabase DB Insert Error:", error);
-    return { success: false, message: "An unexpected error occurred. Please try again." };
+    console.error("❌ SUPABASE INSERT ERROR:", error.message, error.details, error.hint);
+    return { success: false, message: `Database error: ${error.message}. Please try again.` };
   }
 
   console.log(`🚀 DATABASE SUCCESS: Saved lead ${email} [Type: ${type}]`);
@@ -68,27 +71,30 @@ export async function submitLead(formData: FormData) {
   if (resend) {
     try {
       if (type === 'ebook-download') {
-        const firstName = name.split(' ')[0] || 'there';
+        console.log(`📧 SENDING USER EMAIL to ${email}...`);
         await resend.emails.send({
-          from: 'Bob Wiley Counseling <hello@bobwileycounseling.com>',
+          from: 'Bob Wiley <ebook@bobwileycounseling.com>',
           to: email,
-          subject: 'Your Free E-Book from Bob Wiley Counseling',
-          react: await EbookTemplate({ firstName }),
+          subject: 'Your Free Guide from Bob Wiley Counseling',
+          react: await EbookTemplate({ firstName: name.split(' ')[0] }),
         });
+        console.log(`✅ USER EMAIL SENT to ${email}`);
       }
+    } catch (e: any) {
+      console.error("❌ RESEND USER EMAIL FAILED:", e.message);
+    }
 
-      // Always notify the team internally
+    try {
+      console.log(`📧 SENDING TEAM ALERT to ${teamEmail}...`);
       await resend.emails.send({
         from: 'Website <alerts@bobwileycounseling.com>',
         to: teamEmail,
         subject: `New Lead: ${name} (${type})`,
         react: await LeadNotificationTemplate({ name, email, type, details }),
       });
-      console.log(`📧 EMAIL SUCCESS: Sent notifications/ebook for ${email}`);
-    } catch (emailError) {
-      console.error("Resend Email Error:", emailError);
-      // We don't fail the whole user request if only the internal email fails
-      // However, if the ebook fails, that's bad. But we've saved to DB as a backup.
+      console.log(`✅ TEAM ALERT SENT to ${teamEmail}`);
+    } catch (e: any) {
+      console.error("❌ RESEND TEAM ALERT FAILED:", e.message);
     }
   } else {
     console.warn("Resend API key missing. Skipping email delivery.");
