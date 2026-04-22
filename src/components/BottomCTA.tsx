@@ -23,15 +23,25 @@ export default function BottomCTA() {
     <section className="section section-cta" id="consult">
       <div className="container cta-container">
         <div className="cta-content">
+          <p className="hero-kicker text-white opacity-80 mb-2">THERE IS NOTHING WRONG WITH YOU</p>
           <h2 className="section-title text-white">Take That Hardest First Step</h2>
-          <p className="cta-desc text-white-alpha">
+          <p className="cta-desc text-white opacity-90 leading-relaxed max-w-xl mb-8">
             Book a free 20-minute consult to see if working together feels right. We'll talk about what you're dealing with, our approach, and outline the next steps.
           </p>
           
-          <ul className="cta-benefits text-white">
-            <li><CheckCircle className="check-icon accent-icon" /> 20 minutes to share what's going on</li>
-            <li><CheckCircle className="check-icon accent-icon" /> Learning about my counseling process</li>
-            <li><CheckCircle className="check-icon accent-icon" /> A concrete roadmap for your success</li>
+          <ul className="cta-benefits text-white space-y-4">
+            <li className="flex items-center gap-3">
+              <CheckCircle className="w-5 h-5 text-sky-200" />
+              <span>20 minutes to share what's going on</span>
+            </li>
+            <li className="flex items-center gap-3">
+              <CheckCircle className="w-5 h-5 text-sky-200" />
+              <span>Learning about my counseling process</span>
+            </li>
+            <li className="flex items-center gap-3">
+              <CheckCircle className="w-5 h-5 text-sky-200" />
+              <span>A concrete roadmap for your success</span>
+            </li>
           </ul>
         </div>
         
