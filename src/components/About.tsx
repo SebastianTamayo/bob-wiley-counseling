@@ -1,32 +1,42 @@
-import Link from 'next/link';
-import { Button } from './ui/Button';
-
 export default function About() {
   return (
     <section className="section section-alt" id="about">
       <div className="container about-container">
-        <div className="about-image-wrapper">
-          <img src="/images/bob-headshot.jpg" alt="Bob Wiley, MA, LMHC, CSAT - Professional Counseling and Therapy" className="about-image-el" />
+        <div className="about-credentials-side reveal">
+          <div className="credentials-card">
+            <h3 className="credentials-title">Credentials</h3>
+            <ul className="credentials-list">
+              <li><span className="check">✓</span> MA in Counseling</li>
+              <li><span className="check">✓</span> Licensed Mental Health Counselor (LMHC)</li>
+              <li><span className="check">✓</span> Certified Substance Abuse Counselor (CSAC)</li>
+              <li><span className="check">✓</span> 29+ years of experience</li>
+              <li><span className="check">✓</span> Author of <em>Life is Easier Than You THINK</em></li>
+              <li><span className="check">✓</span> Trained in Option Process Dialogue®</li>
+            </ul>
+          </div>
         </div>
         
-        <div className="about-content">
-          <p className="kicker">MEET BOB</p>
-          <h2 className="section-title">A trusted guide for turning insight into lasting change.</h2>
-          <p className="section-desc">
-            My name is Bob Wiley and for the past 30+ years, I've been helping people find their way out of a state of survival, to a state of thrival. As a licensed mental health counselor and certified life coach, I specialize in working with individuals navigating anxiety, relationship issues, and the heavy burden that comes with self-doubt and feeling stuck.
-          </p>
-          <p className="section-desc">
-            My approach goes beyond just listening. I will give you the framework to understand how you are built, why you react the way you do, and equip you to shift your core self so you don't need therapy forever.
-          </p>
+        <div className="about-content reveal reveal-delay-2">
+          <h2 className="section-title">About Bob Wiley</h2>
+          <div className="about-bio">
+            <p>
+              I believe that successful living comes from unconditional self-love and non-judgmental self-ownership. For over 29 years, I have been helping individuals from all walks of life discover this truth for themselves.
+            </p>
+            <p>
+              My own journey of personal growth led me to the profound teachings of Barry Neil Kaufman and the Option Institute. What I discovered transformed not only my life but my entire approach to helping others.
+            </p>
+            <p>
+              I am passionate and excited about the therapeutic work I do with each individual I see. I work to build a safe, trusting and honest therapeutic relationship where genuine exploration can happen.
+            </p>
+            <p>
+              My role is not to fix you—because there is nothing wrong with you. My role is to ask the questions that help you uncover your own wisdom, discover your own clarity, and access your own power to create the life you truly want.
+            </p>
+          </div>
           
-          <ul className="about-creds">
-            <li><span className="check-icon">✓</span> Licensed Mental Health Counselor (LMHC)</li>
-            <li><span className="check-icon">✓</span> Over two decades of experience helping individuals</li>
-            <li><span className="check-icon">✓</span> Certified Clinical Anxiety Professional</li>
-          </ul>
-          
-          <div className="about-cta">
-            <Link href="#hero" className="btn btn-primary">Book a consult</Link>
+          <div className="about-footer">
+            <p className="thoreau-quote">
+              <span className="quote-label">As Thoreau said:</span> "There are a thousand hacking at the branches to every one striking at the root." Together, we strike at the root.
+            </p>
           </div>
         </div>
       </div>

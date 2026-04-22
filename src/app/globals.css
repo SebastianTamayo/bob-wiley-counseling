@@ -638,10 +638,100 @@ button, input, textarea {
 /* About Section */
 .about-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: flex-start;
 }
+
+@media (min-width: 992px) {
+  .about-container {
+    grid-template-columns: 1.2fr 2fr;
+  }
+}
+
+.credentials-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 120px;
+}
+
+.credentials-title {
+  font-size: 1.25rem;
+  color: var(--color-primary);
+  margin-bottom: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+}
+
+.credentials-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.credentials-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: var(--color-heading);
+}
+
+.credentials-list em {
+  font-style: italic;
+  font-weight: 600;
+}
+
+.credentials-list .check {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.about-bio {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.about-bio p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--color-text);
+}
+
+.about-footer {
+  border-top: 2px solid var(--color-primary);
+  padding-top: 2.5rem;
+}
+
+.thoreau-quote {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--color-heading);
+  font-style: italic;
+  font-family: var(--font-serif);
+}
+
+.quote-label {
+  display: block;
+  font-size: 0.9rem;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  font-family: var(--font-body);
+}
+
 .about-image-placeholder {
   aspect-ratio: 3/4;
   background-color: #cbd5e1;
