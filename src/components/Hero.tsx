@@ -48,7 +48,7 @@ export default function Hero() {
             Life is easier than you think. Together, we’ll uncover the beliefs that have been creating your struggles and discover the inner peace, clarity and confidence you’ve been searching for.
           </p>
           <div className="waitlist-indicator">
-            <span className="dot"></span> Waitlist for January 2027 is now open
+            <span className="dot"></span> Currently accepting new clients
           </div>
 
           <div className="hero-ctas">

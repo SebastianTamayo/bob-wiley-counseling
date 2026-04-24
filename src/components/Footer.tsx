@@ -16,10 +16,8 @@ export default function Footer() {
           
           <div className="footer-links-wrapper">
             <div className="footer-col">
-              <h4 className="footer-heading">Contact</h4>
               <nav className="footer-nav">
-                <a href="mailto:hello@bobwileycounseling.com">hello@bobwileycounseling.com</a>
-                <a href="tel:+15551234567">(555) 123-4567</a>
+                <Link href="#hero" className="footer-cta-link">Schedule a Free Consult</Link>
               </nav>
             </div>
             <div className="footer-col">

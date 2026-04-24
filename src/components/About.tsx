@@ -9,7 +9,7 @@ export default function About() {
               <li><span className="check">✓</span> MA in Counseling</li>
               <li><span className="check">✓</span> Licensed Mental Health Counselor (LMHC)</li>
               <li><span className="check">✓</span> Certified Substance Abuse Counselor (CSAC)</li>
-              <li><span className="check">✓</span> 29+ years of experience</li>
+              <li><span className="check">✓</span> 30+ years of experience</li>
               <li><span className="check">✓</span> Author of <em>Life is Easier Than You THINK</em></li>
               <li><span className="check">✓</span> Trained in Option Process Dialogue®</li>
             </ul>
@@ -20,7 +20,7 @@ export default function About() {
           <h2 className="section-title">About Bob Wiley</h2>
           <div className="about-bio">
             <p>
-              I believe that successful living comes from unconditional self-love and non-judgmental self-ownership. For over 29 years, I have been helping individuals from all walks of life discover this truth for themselves.
+              I believe that successful living comes from unconditional self-love and non-judgmental self-ownership. For over 30 years, I have been helping individuals from all walks of life discover this truth for themselves.
             </p>
             <p>
               My own journey of personal growth led me to the profound teachings of Barry Neil Kaufman and the Option Institute. What I discovered transformed not only my life but my entire approach to helping others.

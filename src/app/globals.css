@@ -418,6 +418,21 @@ button, input, textarea {
   transform: translateX(4px);
 }
 
+.footer-cta-link {
+  color: var(--color-primary) !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.9rem !important;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+}
+
+.footer-cta-link:hover {
+  border-bottom-color: var(--color-primary);
+  transform: translateY(-2px) !important;
+}
+
 .footer-bottom {
   display: flex;
   justify-content: space-between;
