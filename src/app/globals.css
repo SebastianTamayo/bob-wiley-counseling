@@ -850,7 +850,7 @@ button, input, textarea {
   justify-content: center;
   gap: 1.5rem;
   margin: 4rem 0;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .sbr-box {

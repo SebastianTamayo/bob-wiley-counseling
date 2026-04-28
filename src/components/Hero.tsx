@@ -73,7 +73,7 @@ export default function Hero() {
               <Input type="email" name="email" placeholder="Email Address" required />
               <textarea 
                 name="details" 
-                placeholder="Describe areas to focus on" 
+                placeholder="What best describes the challenges you are facing?"
                 className="input-field" 
                 rows={3} 
                 style={{ width: '100%', marginBottom: '1rem', resize: 'vertical' }}

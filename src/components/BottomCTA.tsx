@@ -9,15 +9,26 @@ import { CheckCircle } from './ui/Icons';
 export default function BottomCTA() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setIsSubmitting(true);
+    setErrorMsg("");
     const formData = new FormData(e.currentTarget);
     formData.append('type', 'bottom-cta-consultation');
-    await submitLead(formData);
-    setIsSubmitting(false);
-    setSuccess(true);
+    try {
+      const result = await submitLead(formData);
+      setIsSubmitting(false);
+      if (result && result.success) {
+        setSuccess(true);
+      } else {
+        setErrorMsg(result?.message || "Please check your inputs and try again.");
+      }
+    } catch (err) {
+      setIsSubmitting(false);
+      setErrorMsg("A network error occurred. Please try again.");
+    }
   }
   return (
     <section className="section section-cta" id="consult">
@@ -46,19 +57,28 @@ export default function BottomCTA() {
         </div>
         
         <div className="cta-form-card">
-          <h3 className="form-card-title">Book your consult</h3>
-          <p className="form-card-desc">Please fill out the brief form below and I will be in touch shortly.</p>
+          <h3 className="form-card-title">Are you ready for change?</h3>
+          <p className="form-card-desc">Fill out the brief form below and I will get back to you within one business day.</p>
           {success ? (
             <div className="form-success-alert">
-              <h4>Consultation Booked!</h4>
-              <p>We've received your request and will contact you shortly to confirm the time.</p>
+              <h4>Request Sent Successfully!</h4>
+              <p>Thank you for reaching out. I'll be in touch soon.</p>
             </div>
           ) : (
             <form className="cta-form" onSubmit={handleSubmit}>
+              <input type="text" name="_botcheck" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
+              {errorMsg && <div className="form-error-alert" style={{ color: 'red', marginBottom: '1rem', fontSize: '0.9rem' }}>{errorMsg}</div>}
               <Input name="name" placeholder="First and Last Name" required />
               <Input type="email" name="email" placeholder="Email Address" required />
+              <textarea 
+                name="details" 
+                placeholder="What best describes the challenges you are facing?"
+                className="input-field" 
+                rows={3} 
+                style={{ width: '100%', marginBottom: '1rem', resize: 'vertical' }}
+              />
               <Button variant="outline" type="submit" className="form-submit-btn btn-danger-outline" disabled={isSubmitting}>
-                {isSubmitting ? 'Requesting...' : 'Request my Consult'}
+                {isSubmitting ? 'Requesting...' : 'Schedule a Free Consult'}
               </Button>
             </form>
           )}
