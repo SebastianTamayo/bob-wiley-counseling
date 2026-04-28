@@ -75,7 +75,7 @@ export async function submitLead(formData: FormData) {
         await resend.emails.send({
           from: 'Bob Wiley <ebook@bobwileycounseling.com>',
           to: email,
-          subject: 'Your Free Guide from Bob Wiley Counseling',
+          subject: 'Here is the guide you requested',
           react: await EbookTemplate({ firstName: name.split(' ')[0] }),
         });
         console.log(`✅ USER EMAIL SENT to ${email}`);
