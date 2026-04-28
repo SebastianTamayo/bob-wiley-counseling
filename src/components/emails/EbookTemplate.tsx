@@ -20,7 +20,7 @@ export const EbookTemplate: React.FC<Readonly<EbookTemplateProps>> = ({
         </Text>
         
         <Text style={text}>
-          Thanks for requesting <strong>"A Guide to Understand Yourself from the Inside Out"</strong>.
+          Thanks for requesting &quot;A Guide to Understand Yourself from the Inside Out&quot;.
         </Text>
         
         <Text style={text}>
