@@ -14,10 +14,15 @@ const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KE
 const teamEmail = process.env.TEAM_NOTIFICATION_EMAIL || 'bob@bobwileycounseling.com';
 
 const leadSchema = z.object({
-  name: z.string().min(1, "Name is required").max(100, "Name is too long"),
+  name: z.string().min(1, "Name is required").max(100, "Name is too long")
+    .refine(val => !/(http|https|www\.|<a|<script)/i.test(val), "Invalid characters in name"),
   email: z.string().email("Invalid email address"),
   type: z.string().default('consultation'),
   details: z.string().optional()
+    .refine(val => {
+      if (!val) return true;
+      return !/(http|https|www\.|<a|<script)/i.test(val);
+    }, "Links are not permitted in the details section")
 });
 
 export async function submitLead(formData: FormData) {
@@ -25,10 +30,25 @@ export async function submitLead(formData: FormData) {
   console.log("📩 INCOMING LEAD AT:", new Date().toLocaleTimeString());
   
   // Honeypot check for bots
-  const honeypot = formData.get('_botcheck')?.toString();
+  const honeypot = formData.get('website')?.toString();
   if (honeypot) {
     // If honeypot is filled, it's a bot. Silently return success to fool it.
     console.warn("Bot detected via honeypot field.");
+    return { success: true, message: "Request received." };
+  }
+
+  // Time-to-fill check
+  const timestampStr = formData.get('timestamp')?.toString();
+  if (timestampStr) {
+    const timestamp = parseInt(timestampStr, 10);
+    const timeToFill = Date.now() - timestamp;
+    if (timeToFill < 3000) { // Less than 3 seconds
+      console.warn(`Bot detected via speed check (${timeToFill}ms).`);
+      return { success: true, message: "Request received." };
+    }
+  } else {
+    // Missing timestamp
+    console.warn("Bot detected: missing timestamp.");
     return { success: true, message: "Request received." };
   }
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Button } from './ui/Button';
 import { Input } from './ui/Input';
@@ -12,6 +12,11 @@ export default function Hero() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
+  const [mountTime, setMountTime] = useState("");
+
+  useEffect(() => {
+    setMountTime(Date.now().toString());
+  }, []);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -67,7 +72,8 @@ export default function Hero() {
             </div>
           ) : (
             <form className="hero-form" onSubmit={handleSubmit}>
-              <input type="text" name="_botcheck" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
+              <input type="text" name="website" style={{ position: 'absolute', opacity: 0, left: '-9999px' }} tabIndex={-1} autoComplete="off" aria-hidden="true" />
+              <input type="hidden" name="timestamp" value={mountTime} />
               {errorMsg && <div className="form-error-alert" style={{ color: 'red', marginBottom: '1rem', fontSize: '0.9rem' }}>{errorMsg}</div>}
               <Input name="name" placeholder="First and Last Name" required />
               <Input type="email" name="email" placeholder="Email Address" required />
